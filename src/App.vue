@@ -158,7 +158,7 @@ export default {
 <style lang="scss">
   $siteOrange: #DF7507;
   $siteGreen: #8EA25D;
-  $siteTeal: #27AFA7;
+  $siteTeal: #6e7a3b;
   $siteBlack: #000000;
   $siteGray-dark: #231F20;
   $siteGray: #D1D3D4;
@@ -299,11 +299,16 @@ export default {
     }
   }
   li.realAnswer {
+    label {
+      color: $siteGreen;
+      font-weight: 400;
+    }
     label:after {
-      border-color: $siteTeal;
+      border-color: $siteGreen;
+      background-color: $siteGreen;
     }
     label:before {
-      content: url('./assets/real.svg');
+      content: url('./assets/checkmark.svg');
       top: 49%;
     }
   }
