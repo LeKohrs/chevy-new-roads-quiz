@@ -144,10 +144,10 @@ export default {
 
     if(mq.matches) {
       window.onresize = function(e) {
-        payload = {
-          msgType: 'childHeightChanged',
-          height: app.clientHeight
-        }
+        // payload = {
+        //   msgType: 'childHeightChanged',
+        //   height: app.clientHeight
+        // }
         parent.postMessage(payload)
       }
     }
@@ -164,6 +164,28 @@ export default {
   $siteGray: #D1D3D4;
   $siteGray-light: #E6E7E8;
   $siteWhite: #ffffff;
+
+  // Mixin for using media queries in sass
+  $respond-to-queries: (
+    mobileOnly: 'all and (max-width: 567px)',
+    tablet: 'all and (min-width: 568px)',
+    tabletOnly: 'and (min-width: 568px) and (max-width: 833px)',
+    tabletDown: 'all and (max-width: 833px)',
+    desktop: 'all and (min-width: 834px)',
+    full: 'all and (min-width: 1024px)',
+    x-large: 'all and (min-width: 1440px)'
+  );
+
+  @mixin respond-to($query) {
+    $media_query: $query;
+    @if map-has-key($respond-to-queries, $query) {
+      $media_query: map-get($respond-to-queries, $query);
+    }
+
+    @media #{$media_query} {
+      @content;
+    }
+  }
 
 // DIN 2014 Light 
 // font-family: din-2014, sans-serif; 
@@ -192,12 +214,22 @@ export default {
     padding-bottom: 56.25%;
   }
   #app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
     padding: 50px 30px 30px;
     max-width: 1200px;
+    height: 573px;
+    max-height: 573px;
     font-family: din-2014, sans-serif; 
     font-weight: 400; 
     font-style: normal; 
+
+    @include respond-to(mobileOnly) {
+      height: auto;
+      max-height: 100%;
+    }
   }
   ul {
     margin: 0;
@@ -317,6 +349,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    width: 100%;
     max-width: 900px;
   }
   .button {

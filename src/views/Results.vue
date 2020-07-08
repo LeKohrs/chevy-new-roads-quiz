@@ -65,15 +65,16 @@ export default {
   }
   img {
     margin-left: 71px;
-    width: 400px;
+    width: 450px;
     height: auto;
     max-height: 300px;
     object-fit: cover;
     flex-grow: 2;
 
-    @include respond-to(mobileOnly) {
+    @include respond-to(tabletDown) {
       margin-bottom: 20px;
       margin-left: 0;
+      width: 100%;
       order: 1;
     }
   }
@@ -92,19 +93,26 @@ export default {
     margin-bottom: 57px;
     max-width: 900px;
 
-    @include respond-to(mobileOnly) {
+    @include respond-to(tabletDown) {
       flex-direction: column; 
+      align-items: flex-start;
+      max-width: 100%;
+      margin: 0;
     }
 
     &__text {
       max-width: 380px;
 
-      @include respond-to(mobileOnly) {
+      @include respond-to(tabletDown) {
         order: 2;
       }
       
       p {
         font-weight: 400; 
+
+        @include respond-to(tabletDown) {
+          margin-bottom: 30px;
+        }
       }
     }
   }

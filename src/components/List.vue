@@ -170,6 +170,10 @@ export default {
     max-width: 500px;
     opacity: 0;
     transition: .5s;
+
+    @include respond-to(mobileOnly) {
+      max-width: 100%;
+    }
     
     &.correct {
       background-color: $siteGreen;
