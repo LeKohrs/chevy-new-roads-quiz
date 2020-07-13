@@ -44,7 +44,7 @@ export default new Vuex.Store({
           { answer: "New Braunfels, Texas", correct: true, imgUrl: require('../assets/200702_Chevy_Question3a_Final.png'), imgUrl_2x: require('../assets/assests_2x/200702_Chevy_Question3a_Final_2x.png') },
         ],
         blurb:
-          "The Buc-ee’s® New Braunfels, Texas, location is the world’s biggest convenience store, at 68,000 square feet, which gives visitors plenty of options for road trip snacks. Plus, visitors can take fill their vehicle’s tank from any of 120 fuel pumps outside.",
+          "The Buc-ee’s® New Braunfels, Texas, location is the world’s biggest convenience store, at 68,000 square feet, which gives visitors plenty of options for road trip snacks. Plus, visitors can fill their vehicle’s tank from any of 120 fuel pumps outside.",
         correct: "New Braunfels, Texas",
         questionType: "listWithImage",
         input: null
@@ -72,7 +72,7 @@ export default new Vuex.Store({
           { answer: "Hawaii", correct: false, imgUrl: require('../assets/200702_Chevy_Question5c_Final.png'), imgUrl_2x: require('../assets/assests_2x/200702_Chevy_Question5c_Final_2x.png')},
         ],
         blurb:
-          "Those with a fear of heights should avoid Mount Evans Scenic Highway, about 60 miles west of Denver, which climbs to 14,260 feet above sea level.",
+          "Those with a fear of heights should avoid Mount Evans Scenic Byway, about 60 miles west of Denver, which climbs to 14,260 feet above sea level.",
         correct: "Colorado",
         questionType: "listWithImage",
         input: null
@@ -128,7 +128,7 @@ export default new Vuex.Store({
           { answer: "Yellowstone National Park", correct: false, imgUrl: require('../assets/200702_Chevy_Question9a_Final.png'), imgUrl_2x: require('../assets/assests_2x/200702_Chevy_Question9a_Final_2x.png') },
         ],
         blurb:
-          "With 12.5 million visits in 2019, Great Smoky National Park had more than double the visits of the runner-up, Grand Canyon National Park. Yellowstone was sixth at 4 million visits.",
+          "With 12.5 million visits in 2019, Great Smoky Mountains National Park had more than double the visits of the runner-up, Grand Canyon National Park. Yellowstone was sixth at 4 million visits.",
         correct: "Great Smoky Mountains National Park",
         questionType: "listWithImage",
         input: null
@@ -143,7 +143,7 @@ export default new Vuex.Store({
           { answer: "19.55 miles", correct: false },
         ],
         blurb:
-          "The Lake Pontchartrain Causeway Bridge in Louisiana is 23.87 miles long—making it the longest continuous bridge over water in the world!",
+          "The Lake Pontchartrain Causeway Bridge in Louisiana is 23.87 miles long—making it the longest continuous bridge over water in the country!",
         correct: "23.87 miles",
         questionType: "list",
         input: null
