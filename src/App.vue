@@ -49,9 +49,14 @@ export default {
           option.disabled = ''
         }
       }
+      this.scrollToTop()
     },
     previousQuestion: function() {
       this.$store.commit('previousQuestion')
+      this.scrollToTop()
+    },
+    scrollToTop: function() {
+      window.scrollTo(0,0);
     },
     startOver: function() {
       this.$store.commit('resetQuestions')
@@ -208,10 +213,6 @@ export default {
   #app {
     margin: 0;
     padding: 0;
-    // overflow: hidden;
-  }
-  body {
-    padding-bottom: 56.25%;
   }
   #app {
     display: flex;
@@ -324,7 +325,6 @@ export default {
     }
     label:before {
       content: url('./assets/x.svg');
-      // height: 10px;
       width: 10px;
       top: 47%;
       left: -30px;

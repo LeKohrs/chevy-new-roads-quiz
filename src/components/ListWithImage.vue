@@ -166,12 +166,19 @@ export default {
   }
   .questions__status {
     padding: 15px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
     
     &.correct {
       background-color: $siteGreen;
+      opacity: 1;
+      visibility: visible;
     }
     &.incorrect {
       background-color: $siteOrange;
+      opacity: 1;
+      visibility: visible;
     }
     h4,
     p {

@@ -125,6 +125,11 @@ export default {
    }
   .questions__answer-list {
     margin-bottom: 15px;
+
+    .label {
+      display: flex;
+      align-items: flex-start;
+    }
   }
   .questions__answers {
     display: flex;
@@ -152,6 +157,7 @@ export default {
     li {
       // margin-bottom: 25px;
       padding: 20px;
+      padding-left: 0;
       font-family: din-2014, sans-serif; 
       font-weight: 200; 
       font-style: normal;
@@ -169,6 +175,7 @@ export default {
     padding: 15px 20px;
     max-width: 500px;
     opacity: 0;
+    visibility: hidden;
     transition: .5s;
 
     @include respond-to(mobileOnly) {
@@ -178,10 +185,12 @@ export default {
     &.correct {
       background-color: $siteGreen;
       opacity: 1;
+      visibility: visible; 
     }
     &.incorrect {
       background-color: $siteOrange;
       opacity: 1;
+      visibility: visible; 
     }
     h4,
     p {
